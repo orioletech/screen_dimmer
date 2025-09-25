@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Screen Dimmer
+Comment=Dim your screen
+Exec=screendimmer            # must match the Flatpak "command"
+Icon=io.github.oriole.screendimmer # no path, no extension
+Terminal=false
+Categories=Utility;
+StartupWMClass=io.github.oriole.screendimmer
+X-Flatpak=io.github.oriole.screendimmer
+Name[en_GB]=io.github.oriole.screendimmer.desktop

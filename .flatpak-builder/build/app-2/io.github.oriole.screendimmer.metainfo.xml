@@ -1,0 +1,21 @@
+mkdir -p packaging
+cat > packaging/io.github.oriole.screendimmer.metainfo.xml <<'XML'
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>io.github.oriole.screendimmer</id>
+  <name>Screen Dimmer</name>
+  <summary>Dim your screen beyond the system minimum</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Proprietary</project_license>
+  <description>
+    <p>Screen Dimmer lets you lower brightness past OS limits—great for night use.</p>
+  </description>
+  <launchable type="desktop-id">io.github.oriole.screendimmer.desktop</launchable>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <releases>
+    <release version="1.0.0" date="2025-09-25"/>
+  </releases>
+</component>
+XML
