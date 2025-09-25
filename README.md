@@ -1,3 +1,3 @@
 # screendimmer
 
-A new Flutter project.
+Dim your screen beyond device limits.
