@@ -12,6 +12,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --device=dri
+  - --talk-name=org.freedesktop.Flatpak
 
 modules:
   - name: app

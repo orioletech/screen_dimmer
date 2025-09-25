@@ -1,0 +1,21 @@
+[Application]
+name=io.github.oriole.screendimmer
+runtime=org.freedesktop.Platform/x86_64/24.08
+sdk=org.freedesktop.Sdk/x86_64/24.08
+command=screendimmer
+
+[Context]
+shared=ipc;
+sockets=x11;wayland;fallback-x11;
+devices=dri;
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=talk
+
+[Extension io.github.oriole.screendimmer.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=io.github.oriole.screendimmer.Debug;

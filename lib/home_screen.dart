@@ -88,18 +88,19 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     try {
-      final which = await Process.run('which', ['redshift']);
+      final which = await _runCmd(['which', 'redshift']);
       setState(() {
         _redshiftAvailable = which.exitCode == 0;
         if (!_redshiftAvailable) {
-          _lastError =
-              'Redshift not found. Install it (e.g. `sudo apt install redshift`)';
+          _lastError = _inFlatpak
+              ? 'Redshift not found on the host system. Install Redshift (or Gammastep) on your OS.'
+              : 'Redshift not found. Install it (e.g. `sudo apt install redshift`).';
         }
       });
 
       if (_redshiftAvailable) {
         // Clear any previous adjustments so the user sees *no* change.
-        await Process.run('redshift', ['-x']);
+        await _runCmd(['redshift', '-x']);
 
         // CHANGE: Align UI & cache to neutral and DO NOT apply anything here.
         _setNeutralUiAndCache();
@@ -152,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
         gammaArg,
       ];
 
-      final result = await Process.run('redshift', args);
+      final result = await _runCmd(['redshift', ...args]);
 
       if (result.exitCode != 0) {
         setState(() {
@@ -178,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _resetRedshift() async {
     if (!_redshiftAvailable) return;
     try {
-      await Process.run('redshift', ['-x']); // clear adjustments
+      await _runCmd(['redshift', '-x']); // clear adjustments
 
       // CHANGE: keep the screen at neutral and sync UI/caches accordingly.
       _setNeutralUiAndCache();
@@ -566,5 +567,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+}
+
+// Detect Flatpak and run commands on the host if needed
+bool get _inFlatpak => Platform.environment.containsKey('FLATPAK_ID');
+
+Future<ProcessResult> _runCmd(List<String> cmd) {
+  if (_inFlatpak) {
+    // Call the host's binaries from inside the sandbox
+    return Process.run('flatpak-spawn', ['--host', ...cmd]);
+  } else {
+    return Process.run(cmd.first, cmd.sublist(1));
   }
 }
