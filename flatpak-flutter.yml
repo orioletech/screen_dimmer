@@ -1,0 +1,45 @@
+# flatpak-flutter.yml  (INPUT manifest)
+id: io.github.oriole.screendimmer
+runtime: org.freedesktop.Platform
+runtime-version: "24.08"
+sdk: org.freedesktop.Sdk
+command: screendimmer
+
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --talk-name=org.freedesktop.Flatpak # for flatpak-spawn --host
+
+modules:
+  - name: screendimmer
+    buildsystem: simple
+    build-commands:
+      # flatpak-flutter will inject `./setup-flutter.sh` for offline SDK activation
+      - flutter config --enable-linux-desktop
+      - flutter build linux --release --no-pub
+
+      # Install the built bundle (binary + data/lib next to it)
+      - install -Dm755 build/linux/x64/release/bundle/screendimmer /app/bin/screendimmer
+      - mkdir -p /app/bin/lib  && cp -a build/linux/x64/release/bundle/lib/.  /app/bin/lib/  || true
+      - mkdir -p /app/bin/data && cp -a build/linux/x64/release/bundle/data/. /app/bin/data/ || true
+
+      # Desktop, metainfo, icons from your repo
+      - install -Dm644 packaging/io.github.oriole.screendimmer.desktop      /app/share/applications/io.github.oriole.screendimmer.desktop
+      - install -Dm644 packaging/io.github.oriole.screendimmer.metainfo.xml /app/share/metainfo/io.github.oriole.screendimmer.metainfo.xml
+      - install -Dm644 packaging/icons/hicolor/64x64/apps/io.github.oriole.screendimmer.png   /app/share/icons/hicolor/64x64/apps/io.github.oriole.screendimmer.png
+      - install -Dm644 packaging/icons/hicolor/128x128/apps/io.github.oriole.screendimmer.png /app/share/icons/hicolor/128x128/apps/io.github.oriole.screendimmer.png
+      - install -Dm644 packaging/icons/hicolor/256x256/apps/io.github.oriole.screendimmer.png /app/share/icons/hicolor/256x256/apps/io.github.oriole.screendimmer.png
+
+    sources:
+      # YOUR APP SOURCE — pin to a tag or commit
+      - type: git
+        url: https://github.com/Oriole-Alex/screen_dimmer.git # <-- update
+        tag: v1.0.0 # or: commit: <sha>
+
+      # FLUTTER SDK SOURCE — pin to your Flutter version
+      - type: git
+        url: https://github.com/flutter/flutter.git
+        tag: 3.35.3 # <-- replace with your `flutter --version`
+        dest: flutter

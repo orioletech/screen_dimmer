@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>io.github.oriole.screendimmer</id>
+  <name>Screen Dimmer</name>
+  <summary>Dim your screen beyond system limits</summary>
+
+  <description>
+    <p>Screen Dimmer lets you lower brightness past OS limits — great for night use.</p>
+  </description>
+
+  <launchable type="desktop-id">io.github.oriole.screendimmer.desktop</launchable>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+
+  <developer_name>Oriole</developer_name>
+
+  <provides>
+    <binary>screendimmer</binary>
+  </provides>
+
+  <categories>
+    <category>Utility</category>
+  </categories>
+
+  <releases>
+    <release version="1.0.0" date="2025-09-25"/>
+  </releases>
+</component>
