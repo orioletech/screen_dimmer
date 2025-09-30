@@ -12,6 +12,7 @@
 .swiftpm/
 migrate_working_dir/
 .flatpak-builder/
+.fpstate/
 
 # IntelliJ related
 *.iml
