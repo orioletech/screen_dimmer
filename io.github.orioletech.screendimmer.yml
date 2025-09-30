@@ -47,4 +47,4 @@ modules:
       - pubspec-sources.json
       - type: git
         url: https://github.com/orioletech/screen_dimmer.git
-        commit: 115eaca3e89c30336110af0048f1135435538854
+        commit: 096851974eecf7b1710d07606f274866ee8d355c
