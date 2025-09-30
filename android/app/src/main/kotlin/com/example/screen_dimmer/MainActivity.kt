@@ -1,4 +1,4 @@
-package io.github.oriole.screendimmer
+package io.github.orioletech.screendimmer
 
 import io.flutter.embedding.android.FlutterActivity
 

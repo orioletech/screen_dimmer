@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Screen Dimmer
+Comment=Dim your screen beyond device limits
+Exec=screendimmer
+Icon=io.github.orioletech.screendimmer
+Terminal=false
+Categories=Utility;
+StartupWMClass=io.github.orioletech.screendimmer
+X-Flatpak=io.github.orioletech.screendimmer

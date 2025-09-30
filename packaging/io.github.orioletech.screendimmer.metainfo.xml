@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>io.github.orioletech.screendimmer</id>
+  <name>Screen Dimmer</name>
+  <summary>Dim your screen beyond system limits</summary>
+
+  <description>
+    <p>Screen Dimmer lets you lower brightness past OS limits — great for night use.</p>
+  </description>
+
+  <launchable type="desktop-id">io.github.orioletech.screendimmer.desktop</launchable>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+
+  <developer_name>Oriole</developer_name>
+
+  <provides>
+    <binary>screendimmer</binary>
+  </provides>
+
+  <categories>
+    <category>Utility</category>
+  </categories>
+
+  <releases>
+    <release version="1.0.0" date="2025-09-25"/>
+  </releases>
+
+  <url type="homepage">https://github.com/orioletech/screen_dimmer</url>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-advertising">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/orioletech/screen_dimmer/refs/heads/main/docs/screenshots/controls.png</image>
+      <caption>Controls</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/orioletech/screen_dimmer/refs/heads/main/docs/screenshots/about.png</image>
+      <caption>About</caption>
+    </screenshot>
+  </screenshots>
+
+
+</component>
