@@ -27,7 +27,7 @@
     <release version="1.0.0" date="2025-09-25"/>
   </releases>
 
-  <url type="homepage">https://github.com/orioletech/screen_dimmer</url>
+  <url type="homepage">https://github.com/orioletech/screendimmer</url>
 
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -52,11 +52,11 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/orioletech/screen_dimmer/refs/heads/main/docs/screenshots/controls.png</image>
+      <image>https://raw.githubusercontent.com/orioletech/screendimmer/refs/heads/main/docs/screenshots/controls.png</image>
       <caption>Controls</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/orioletech/screen_dimmer/refs/heads/main/docs/screenshots/about.png</image>
+      <image>https://raw.githubusercontent.com/orioletech/screendimmer/refs/heads/main/docs/screenshots/about.png</image>
       <caption>About</caption>
     </screenshot>
   </screenshots>

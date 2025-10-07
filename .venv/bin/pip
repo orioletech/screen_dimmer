@@ -1,4 +1,4 @@
-#!/home/alex/Documents/GitHub/screen_dimmer/.venv/bin/python3
+#!/home/alex/Documents/GitHub/screendimmer/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -2,7 +2,7 @@
 # Visit the flatpak-flutter project at https://github.com/TheAppgineer/flatpak-flutter
 id: io.github.orioletech.screendimmer
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: screendimmer
 sdk-extensions:
@@ -51,5 +51,5 @@ modules:
     sources:
       - pubspec-sources.json
       - type: git
-        url: https://github.com/orioletech/screen_dimmer.git
+        url: https://github.com/orioletech/screendimmer.git
         commit: 096851974eecf7b1710d07606f274866ee8d355c

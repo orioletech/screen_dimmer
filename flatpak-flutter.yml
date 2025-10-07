@@ -53,7 +53,7 @@ modules:
 
     sources:
       - type: git
-        url: https://github.com/orioletech/screen_dimmer.git
+        url: https://github.com/orioletech/screendimmer.git
         commit: 25ec2a7106a512b675c53e6607929ed3038f4989
       - type: git
         url: https://github.com/flutter/flutter.git
