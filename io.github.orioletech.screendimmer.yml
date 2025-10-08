@@ -29,9 +29,7 @@ modules:
         build-commands:
           - install -d /app/bin
           - ln -sf /var/lib/flutter/bin/setup-flutter.sh /app/bin/setup-flutter.sh
-            || true
-          - ln -sf /var/lib/flutter/bin/flutter          /app/bin/flutter          ||
-            true
+          - ln -sf /var/lib/flutter/bin/flutter          /app/bin/flutter
       - flutter-sdk-3.35.3.json
     buildsystem: simple
     build-commands:
@@ -52,4 +50,4 @@ modules:
       - pubspec-sources.json
       - type: git
         url: https://github.com/orioletech/screendimmer.git
-        commit: 25ec2a7106a512b675c53e6607929ed3038f4989
+        commit: f5c2854183f7696953cbae55868b66af2c2de086
