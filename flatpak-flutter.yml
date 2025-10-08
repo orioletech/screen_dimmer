@@ -54,7 +54,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/orioletech/screendimmer.git
-        commit: f5c2854183f7696953cbae55868b66af2c2de086
+        commit: dbe6e5adf04c19dbf20af655e4c6358f1da3f215
       - type: git
         url: https://github.com/flutter/flutter.git
         tag: 3.35.3
